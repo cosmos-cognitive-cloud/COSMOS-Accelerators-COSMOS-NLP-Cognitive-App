@@ -1,0 +1,83 @@
+<div class="maindiv">
+    <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+
+    <api-details-header 
+        apiTitle="Language Understanding Intelligent Service"
+        apiDescription="LUIS is designed to enable developers to build smart applications that can understand human language and accordingly react to user requests. With LUIS, a developer can quickly deploy an HTTP endpoint that will take the sentences sent to it and interpret them in terms of their intents (the intentions they convey) and entities (key information relevant to the intent). By using LUIS web interface, you can create an application, with a set of intents and entities that are relevant to your application’s domain. Once your application is deployed and traffic starts to flow into the system, LUIS uses active learning to improve itself. LUIS supports several languages as English, French, Italian, German, Spanish, Brazilian Portuguese, Japanese, Korean and Chinese are supported when it comes to understanding utterances."
+        rowStyleClass="tablerow1"
+    >
+    <div api-content>
+            <div class="row">
+                <!--<div class="col-sm-4 col-md-4 col-lg-6">
+                    <div class="input-section" style="align-content: center">
+                        <textarea [(ngModel)]="textToAnalyze" style="resize:none"></textArea>
+                        <button class="cosmosButton-stretched btn btn-info" (click)="analyzeText()">Analyze</button>
+                    </div>
+                </div>-->
+                <!--<div class="col-sm-6">
+                    <output-section style="height: 240px"
+                        [showButtons]="showCodeButtons" 
+                        [isApiResultLoading]="isLoading"
+                        buttonContextText="Highlight Content" 
+                        jsonText="{{ entityLink | json }}"
+                    >
+                            <div formatted-output [innerHtml]="formattedResult" style="height: 200px;overflow-y: scroll;padding: 10px;">
+                            </div>
+                    </output-section>
+                </div>-->
+            </div>
+
+            <div class="row">
+                <button class="cosmosButton-withmargin btn btn-info pull-left" (click)="getPersonalAssistants()" style="margin-left:0px">Get Personal Assistants</button>
+            </div>
+            <table *ngIf='apps'>
+                <thead>
+                    <tr>
+                        <td class="cosmosButton-withmargin pull-left" style="font-weight:bold">Culture</td>
+                        <td class="cosmosButton-withmargin pull-left" style="font-weight:bold;width:300px">App ID</td>
+                        <td class="cosmosButton-withmargin pull-left" style="font-weight:bold;width:300px">Query</td>
+                        <td class="cosmosButton-withmargin pull-left" style="font-weight:bold">Submit</td>
+                        <td class="cosmosButton-withmargin pull-left" style="font-weight:bold">Result</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cosmosButton-withmargin pull-left">English</td>
+                        <td class="cosmosButton-withmargin pull-left">{{apps['English'] | appId}}</td>
+                        <td class="cosmosButton-withmargin pull-left"><input type="text" [(ngModel)]='queryTextEN'></td>
+                        <td class="cosmosButton-withmargin pull-left"><button class="cosmosButton-withmargin btn btn-info pull-left" style="margin-left:0px" (click)='submit(apps["English"],"English")'>Submit</button></td>
+                        <td class="cosmosButton-withmargin pull-left"><input type="text" [(ngModel)]='resultEN'></td>          
+                    </tr>
+                    <tr>
+                        <td class="cosmosButton-withmargin pull-left">Chinese</td>
+                        <td class="cosmosButton-withmargin pull-left">{{apps['Chinese'] | appId}}</td>
+                        <td class="cosmosButton-withmargin pull-left"><input type="text" [(ngModel)]='queryTextCN'></td>
+                        <td class="cosmosButton-withmargin pull-left"><button class="cosmosButton-withmargin btn btn-info pull-left" style="margin-left:0px" (click)='submit(apps["Chinese"],"Chinese")'>Submit</button></td>
+                        <td class="cosmosButton-withmargin pull-left"><input type="text" [(ngModel)]='resultCN'></td>  
+                    </tr>
+                    <tr>
+                        <td class="cosmosButton-withmargin pull-left">French</td>
+                        <td class="cosmosButton-withmargin pull-left">{{apps['French'] | appId}}</td>
+                        <td class="cosmosButton-withmargin pull-left"><input type="text" [(ngModel)]='queryTextFR'></td>
+                        <td class="cosmosButton-withmargin pull-left"><button class="cosmosButton-withmargin btn btn-info pull-left" style="margin-left:0px" (click)='submit(apps["French"],"French")'>Submit</button></td>
+                        <td class="cosmosButton-withmargin pull-left"><input type="text" [(ngModel)]='resultFR'></td> 
+                    </tr>
+                    <tr>
+                        <td class="cosmosButton-withmargin pull-left">Italian</td>
+                        <td class="cosmosButton-withmargin pull-left">{{apps['Italian'] | appId}}</td>
+                        <td class="cosmosButton-withmargin pull-left"><input type="text" [(ngModel)]='queryTextIT'></td>
+                        <td class="cosmosButton-withmargin pull-left"><button class="cosmosButton-withmargin btn btn-info pull-left" style="margin-left:0px" (click)='submit(apps["Italian"],"Italian")'>Submit</button></td>
+                        <td class="cosmosButton-withmargin pull-left"><input type="text" [(ngModel)]='resultIT'></td> 
+                    </tr>
+                    <tr>
+                        <td class="cosmosButton-withmargin pull-left">Spanish</td>
+                        <td class="cosmosButton-withmargin pull-left">{{apps['Spanish'] | appId}}</td>
+                        <td class="cosmosButton-withmargin pull-left"><input type="text" [(ngModel)]='queryTextES'></td>
+                        <td class="cosmosButton-withmargin pull-left"><button class="cosmosButton-withmargin btn btn-info pull-left" style="margin-left:0px" (click)='submit(apps["Spanish"],"Spanish")'>Submit</button></td>
+                        <td class="cosmosButton-withmargin pull-left"><input type="text" [(ngModel)]='resultES'></td> 
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    </api-details-header>
+</div>
