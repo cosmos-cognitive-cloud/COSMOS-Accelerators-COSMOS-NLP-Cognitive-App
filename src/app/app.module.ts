@@ -14,9 +14,6 @@ import 'font-awesome/css/font-awesome.css';
 import { PersonalAssistantsComponent } from './personal-assistants/personal-assistants.component';
 import { DataService } from "app/services/data.service";
 import { AppIdPipe } from './app-id.pipe';
-import { AppDetailComponent } from './app-detail/app-detail.component';
-import { AppDetailGuard } from "./services/app-guard.service";
-import { routing } from "app/app.routing";
 
 @NgModule({
   declarations: [
@@ -24,8 +21,7 @@ import { routing } from "app/app.routing";
     ApiHeaderComponent,
     OutputSectionComponent,
     PersonalAssistantsComponent,
-    AppIdPipe,
-    AppDetailComponent
+    AppIdPipe
   ],
   imports: [
     BrowserModule,
@@ -33,16 +29,11 @@ import { routing } from "app/app.routing";
     HttpModule,
     ng2Bootstrap.Ng2BootstrapModule,
     MaterialModule,
-    BrowserAnimationsModule,
-    routing
-  ],
-  entryComponents: [
-    AppDetailComponent
+    BrowserAnimationsModule
   ],
   providers: [ng2Bootstrap.ComponentLoaderFactory,
               ng2Bootstrap.PositioningService,
-              DataService,
-              AppDetailGuard],
+              DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

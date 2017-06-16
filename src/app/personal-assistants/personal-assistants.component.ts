@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from "app/services/data.service";
+import { DataService } from "../services/data.service";
 import { MdDialog, MdDialogRef, MdSnackBar } from "@angular/material";
 import { IApp } from "app/iapp";
-import { Router, ActivatedRoute, RouterModule} from "@angular/router";
 
 @Component({
   selector: 'personal-assistants',
@@ -19,7 +18,6 @@ export class PersonalAssistantsComponent implements OnInit {
 
   public errorMessage = '';
   public apps: IApp[];
-  public keys: Object;
   public queryTextEN = '';
   public resultEN = '';
   public queryTextCN = '';

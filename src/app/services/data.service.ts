@@ -13,7 +13,7 @@ export class DataService {
      responses in the right places.
   */
   private _appsUrl = 'https://vivatechapi.cosmos.ai/luis/api/v2.0/'; // LUIS API URL
-  private _apiKey = '6fc5c859cee94cc7bd2833c4d729ea2e'; // Tommy's personal API Key
+  private _apiKey = '6fc5c859cee94cc7bd2833c4d729ea2e'; // API Key
   private _headers: Headers;
   private _options: RequestOptions;
 
