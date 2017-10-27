@@ -1,4 +1,4 @@
-# Chatbot Conversational Workflow Algorithm Sample
+# COSMOS NLP Cognitive App Sample
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
@@ -22,7 +22,7 @@ Now that you have your environment set up, you can finally start working with th
 3. Ctrl + Shift + ` to open a terminal window
 4. Type `npm install` to download the project's packages
 5. Type `ng serve` to run the application via `http://localhost:4200/`.  The app will automatically reload if you change any of the source files.
-6. Success!  You should see a working demo of the LUIS API built on Angular.
+6. Success!  You should see a working demo of the COSMOS NLP Cognitive App built on Angular.
 
 NOTE: Change `_apiKey` under `data.service.ts` to utilize your subscription.
 
