@@ -1,4 +1,4 @@
-# LUIS API Sample
+# Chatbot Conversational Workflow Algorithm Sample
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
